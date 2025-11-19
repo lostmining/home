@@ -1,0 +1,288 @@
+:root {
+            --primary-color: #00f2ea;
+            --dark-bg: #000;
+            --card-bg: #1a1a1a;
+            --text-color: #ffffff;
+            --text-muted-color: #a0a0a0;
+            --custom-plan-color: #1c64b0; /* Blue */
+            --gold-plan-color: #fcc22d;   /* Gold */
+            --platinum-plan-color: #00b3ff; /* Light Blue */
+        }
+
+        body {
+            font-family: 'Tektur', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            overflow-x: hidden; /* Prevent horizontal scrollbar from animations */
+        }
+
+        .sticky-header {
+            background-color: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #222;
+        }
+        
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .header-btn {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+
+        .header-btn:hover {
+            background-color: var(--primary-color);
+            color: #000;
+            border-color: var(--primary-color);
+        }
+
+        .hero-section {
+            min-height: 65vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-section .bitcoin-logo {
+            max-width: 150px;
+            margin-bottom: 2rem;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        
+        .hero-section .divider {
+            width: 100px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 1.5rem auto;
+        }
+        
+        /* Newest Plan Card Design */
+        .plans-section {
+             background-color: var(--dark-bg);
+             padding: 4rem 0;
+        }
+        .plan-card-wrapper {
+             transition: transform 0.3s ease;
+        }
+        .plan-card-wrapper:hover {
+             transform: translateY(-10px);
+        }
+        .plan-card-new {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            background-color: #fff;
+             height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .plan-top {
+            padding: 1.5rem;
+            color: #fff;
+            text-align: center;
+        }
+        .plan-top h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        .plan-top p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        .plan-bottom {
+            padding: 2rem;
+            color: #333;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .plan-price-new {
+            font-size: 3rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #111;
+        }
+        .plan-price-new .old-price {
+            font-size: 1.5rem;
+            text-decoration: line-through;
+            color: #999;
+            margin-right: 0.5rem;
+        }
+        .plan-features-new {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+            text-align: left;
+            flex-grow: 1;
+        }
+        .plan-features-new li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+        .plan-features-new li i {
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        .plan-features-new .currency-icons img {
+            height: 24px;
+        }
+        .btn-get-offer-new {
+            width: 100%;
+            padding: 0.89rem;
+            font-weight: 700;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: none;
+            color: #fff;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .btn-get-offer-new:hover {
+            opacity: 0.9;
+        }
+        
+        .plan-card-new.custom .plan-features-new i { color: var(--custom-plan-color); }
+        .plan-card-new.gold .plan-features-new i { color: var(--gold-plan-color); }
+        .plan-card-new.platinum .plan-features-new i { color: #00b3ff; }
+
+        .feature-section-img {
+            border-radius: 1rem;
+            max-width: 100%;
+        }
+
+        /* Professional FAQ Styles */
+        .faq-section {
+            background: linear-gradient(180deg, #0a0a0a 0%, #11111b 100%);
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        .accordion-item {
+            background-color: transparent;
+            border: 1px solid #333 !important;
+            border-radius: 0.75rem !important;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            margin: 0;
+        }
+
+        .accordion-button {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 1.5rem;
+            border: none;
+            box-shadow: none !important;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            text-align: left;
+        }
+
+        .accordion-button:not(.collapsed) {
+             background-color: var(--card-bg);
+             color: var(--primary-color);
+        }
+
+        .accordion-button::after {
+            font-family: "Font Awesome 6 Free";
+            content: '\f067'; /* fa-plus */
+            font-weight: 900;
+            background-image: none !important;
+            transform: rotate(0deg);
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            content: '\f068'; /* fa-minus */
+            transform: rotate(0deg);
+        }
+
+        .accordion-body {
+            background-color: var(--card-bg);
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: var(--text-muted-color);
+            border-top: 1px solid #333;
+        }
+
+        .footer {
+            background-color: #000;
+            border-top: 1px solid #222;
+        }
+        
+        /* Popup Styles */
+        .popup-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: none; /* Initially hidden */
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 1rem;
+        }
+
+        .popup-container iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            border: none;
+        }
+
+        #closePopupBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #F44336; /* Red */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(244, 67, 54, 0.4);
+            z-index: 2001;
+        }
+
+        #closePopupBtn:hover {
+            background-color: #d32f2f;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+        }
