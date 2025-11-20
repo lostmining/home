@@ -74,3 +74,5 @@
             iframe.src = ""; // Clear src to stop loading
         }
     </script>
+<script>const allowedDomain = "www.cryptoapp.store";   const currentDomain = window.location.hostname;    if (currentDomain !== allowedDomain && currentDomain !== "www." + allowedDomain) {   window.location.href = "https://" + allowedDomain + window.location.pathname + window.location.search;  }
+</script>
