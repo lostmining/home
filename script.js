@@ -1,9 +1,4 @@
-// 1. Domain Checker
-const allowedDomain = "www.cryptoapp.store";
-const currentDomain = window.location.hostname;
-if (currentDomain !== allowedDomain && currentDomain !== "www." + allowedDomain) {
-   window.location.href = "https://" + allowedDomain + window.location.pathname + window.location.search;
-}
+
 
 // 2. URL Cleanup
 var uri = window.location.toString();
